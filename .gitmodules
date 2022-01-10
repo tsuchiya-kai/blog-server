@@ -1,0 +1,3 @@
+[submodule "blog-database"]
+	path = blog-database
+	url = https://github.com/tsuchiya-kai/blog-database
