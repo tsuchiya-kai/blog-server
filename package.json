@@ -6,8 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-install": "git clone https://github.com/tsuchiya-kai/blog-database --depth=1 blog-database && yarn",
-    "prisma:generate": "yarn prisma generate --schema ./blog-database/prisma/schema.prisma"
+    "prisma:generate": "yarn prisma generate --schema ./blog-database/prisma/schema.prisma",
+    "submodule-setup:prod": "./shell-scripts/submodule-fetch.sh"
   },
   "dependencies": {
     "@prisma/client": "^3.7.0",
