@@ -1,5 +1,5 @@
 SUBMODULE_GITHUB=github.com/tsuchiya-kai/blog-database
-SUBMODULE_PATH=blog-database
+SUBMODULE_PATH=blog-database-prod
 
 # envファイル読み込み（local検証用）
 # source ./.env
