@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-install": "git clone https://github.com/tsuchiya-kai/blog-database --depth=1 blog-database-prod && yarn",
+    "vercel-install": "git clone https://github.com/tsuchiya-kai/blog-database --depth=1 blog-database && yarn",
     "prisma:generate": "yarn prisma generate --schema ./blog-database/prisma/schema.prisma"
   },
   "dependencies": {
