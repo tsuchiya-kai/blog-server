@@ -7,8 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "prisma:generate": "yarn prisma generate --schema ./blog-database/prisma/schema.prisma",
-    "prisma:generate:prod": "yarn prisma generate --schema ./blog-database-prod/prisma/schema.prisma",
-    "submodule-setup:prod": "./shell-scripts/submodule-fetch.sh"
+    "create-submodule-copy": "./shell-scripts/create-submodule-copy.sh",
+    "prisma:generate:prod": "yarn prisma generate --schema ./blog-database-copy/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^3.7.0",

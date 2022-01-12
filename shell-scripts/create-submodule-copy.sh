@@ -1,5 +1,5 @@
 SUBMODULE_GITHUB=github.com/tsuchiya-kai/blog-database
-SUBMODULE_PATH=blog-database-prod
+SUBMODULE_COPY_DIR_NAME=blog-database-copy
 
 # envファイル読み込み（local検証用）
 # source ./.env
@@ -14,25 +14,12 @@ fi
 set -e
 
 # vercel での build 時に submodule として扱うディレクトリを作成
-rm -rf tmp || true # 念のため削除コマンドを実行
-mkdir tmp
-cd tmp
+rm -rf $SUBMODULE_COPY_DIR_NAME || true # 念のため削除コマンドを実行
+mkdir $SUBMODULE_COPY_DIR_NAME
+cd $SUBMODULE_COPY_DIR_NAME
 
 # submodule のリポジトリをfetchする
 git init
 git remote add origin https://$GITHUB_ACCESS_TOKEN@$SUBMODULE_GITHUB # submodule のリポジトリを設定
 git fetch
 git checkout main
-
-# submoduleに模したディレクトリに移動
-cd ..
-
-if [ ! -e {./$SUBMODULE_PATH/} ]; then
-  mkdir $SUBMODULE_PATH/
-fi
-
-rm -rf tmp/.git
-mv tmp/* $SUBMODULE_PATH/ 
-
-# clean up
-rm -rf tmp
