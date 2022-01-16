@@ -8,8 +8,12 @@ export default async function prismaTest(
   req: NextApiRequest,
   res: NextApiResponse<PrismaTypes.User | null>
 ) {
-  await prisma.user.create({
-    data: {
+  await prisma.user.upsert({
+    where: {
+      id: 1,
+    },
+    update: {},
+    create: {
       name: "テストuser1",
       email: "test@example.com",
     },
