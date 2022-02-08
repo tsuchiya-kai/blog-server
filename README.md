@@ -1,7 +1,7 @@
 # blog-server
 
 ブログサイトを運営するためのアプリケーション側リポジトリ。
-別にもう一つ [database リポジトリ](https://github.com/tsuchiya-kai/blog-database)を用意する。
+別にもう一つ [database リポジトリ](https://github.com/tsuchiya-kai/blog-database)が存在する。
 
 ## 概要
 
